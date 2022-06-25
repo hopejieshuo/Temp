@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="user-scalable=no;"></meta>
+        <title>导航</title>
+        <style>
+            #btn{
+                width:200px;
+                height:200px;
+                text-align:center;
+                font-size:180px;
+                transition:background-color 1s,transform 1s;
+                background-color:#FF0000;
+                transform: rotate(135deg);
+                border-radius:200px;
+            }
+            #list{
+                position:absolute;
+                width:200px;
+                font-size:50px;
+                text-align:center;
+                background-color:#AAAAAA;
+                transition:font-size 1s,width 1s,left 1s,top 1s;
+                font-size:0px;
+                width:0px;
+                left:100px;
+                top:110px;
+            }
+            .option{
+                border-style:solid;
+                border-width:1px;
+            }
+            #tit{
+                position:absolute;
+                width:700px;
+                font-size:50px;
+                text-align:center;
+                transition:font-size 1s,height 1s,left 1s,top 1s;
+                font-size:0px;
+                height:0px;
+                left:110px;
+                top:110px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div id="btn" onclick="change();">+</div>
+            <div id="list">
+                <div class="option" onclick="javascript:window.open('001/index.html');">001</div>
+                <div class="option" onclick="javascript:window.open('002/index.html');">002</div>
+                <div class="option" onclick="javascript:window.open('003/index.html');">003</div>
+                <div class="option" onclick="javascript:window.open('004/index.html');">004</div>
+            </div>
+            <div id="tit">游戏&工具</div>
+        </div>
+        <script type="text/javascript">
+            var isClose=false;
+            var obj1=document.getElementById("btn");
+            var obj2=document.getElementById("list");
+            var obj3=document.getElementById("tit");
+            setInterval(function(){
+                obj3.style.color="rgb("+Math.round(Math.random()*255)+","+Math.round(Math.random()*255)+","+Math.round(Math.random()*255)+")";
+                obj3.style.backgroundColor="rgb("+Math.round(Math.random()*255)+","+Math.round(Math.random()*255)+","+Math.round(Math.random()*255)+")";
+            },100);
+            function change(){
+                if(isClose==false){
+                    obj1.style.transition="transform 1s,background-color 1s";
+                    obj1.style.transform="rotate(0deg)";
+                    obj1.style.backgroundColor="#00FF00";
+                    
+                    obj2.style.transition="font-size 1s,width 1s,left 1s,top 1s";
+                    obj2.style.fontSize="50px";
+                    obj2.style.width="200px";
+                    obj2.style.left="0px";
+                    obj2.style.top="220px";
+                    
+                    obj3.style.transition="font-size 1s,height 1s,left 1s,top 1s";
+                    obj3.style.fontSize="80px";
+                    obj3.style.height="100px";
+                    obj3.style.left="220px";
+                    obj3.style.top="50px";
+                    
+                    isClose=true;
+                        
+                }else{
+                    obj1.style.transition="transform 1s,background-color 1s";
+                    obj1.style.transform="rotate(135deg)";
+                    obj1.style.backgroundColor="#FF0000";
+                    
+                    obj2.style.transition="font-size 1s,width 1s,left 1s,top 1s";
+                    obj2.style.fontSize="0px";
+                    obj2.style.width="0px";
+                    obj2.style.left="100px";
+                    obj2.style.top="110px";
+                    
+                    obj3.style.transition="font-size 1s,height 1s,left 1s,top 1s";
+                    obj3.style.fontSize="0px";
+                    obj3.style.height="0px";
+                    obj3.style.left="110px";
+                    obj3.style.top="110px";
+                    
+                    isClose=false;
+                }
+            }
+        </script>
+    </body>
+</html>
