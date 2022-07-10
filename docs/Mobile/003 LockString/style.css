@@ -1,0 +1,28 @@
+.main{
+    position:absolute;
+    width:600px;
+    height:600px;
+    left:calc(50% - 300px);
+    top:calc(50% - 300px);
+}
+.encode,.code{
+    width:600px;
+    height:200px;
+    outline:none;
+    font-size:40px;
+    line-height:40px;
+}
+.code{
+    position:relative;
+    top:50px;
+}
+.encoding,.coding{
+    position:absolute;
+    width:250px;
+    height:100px;
+    top:500px;
+    font-size:40px;
+}
+.encoding{
+    left:350px;
+}
