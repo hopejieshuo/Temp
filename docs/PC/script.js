@@ -4,3 +4,6 @@ document.querySelector(".one").onclick=function(){
 document.querySelector(".two").onclick=function(){
     window.open("002 Battery/index.html");
 }
+document.querySelector(".three").onclick=function(){
+    window.open("003 LockString/index.html");
+}
