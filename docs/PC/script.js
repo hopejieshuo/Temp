@@ -7,3 +7,6 @@ document.querySelector(".two").onclick=function(){
 document.querySelector(".three").onclick=function(){
     window.open("003 LockString/index.html");
 }
+document.querySelector(".four").onclick=function(){
+    window.open("004 SliderButton/index.html");
+}
