@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+.wavy span{
+    position: absolute;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 75px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    animation: wavyAnimate 10s linear infinite;
+    animation-delay: calc(0.25s * var(--i));
+}
+
+@keyframes wavyAnimate {
+    0%, 25%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+    75%, 100%{
+        transform: rotate(720deg);
+    }
+}
